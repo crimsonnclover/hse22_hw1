@@ -40,3 +40,10 @@ multiqc -o multiqc fastqc
 ![image](https://user-images.githubusercontent.com/99398496/194559963-fd0317fe-4213-478d-a54d-011b4a8f4100.png)
 ![image](https://user-images.githubusercontent.com/99398496/194559989-377abca2-29f9-4b99-b602-6ffbf28ee7b4.png)
 ![image](https://user-images.githubusercontent.com/99398496/194560029-a53a3a45-cb5e-434a-ac39-ad1741ace567.png)
+## Cбор контигов и скаффолдов
+```
+screen platanus assemble -o Poil -f sub1.fastq.trimmed sub2.fastq.trimmed 2> assemble.log
+screen platanus scaffold -o Poil -c Poil_contig.fa -IP1 sub1.fastq.trimmed sub2.fastq.trimmed -OP2 mps1.fastq.int_trimmed mps2.fastq.int_trimmed 2>scaffold.log
+```
+Анализ контигов и скаффолдов:
+https://colab.research.google.com/drive/1Z2MnNyDA8B92Zj3IiqTB_d4_QetQGCA8?usp=sharing
