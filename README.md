@@ -58,6 +58,7 @@ seqtk subseq Poil_scaffold.fa tmp.txt > scaffold1_len3836081_cov232.fasta
 grep -o "N\+" scaffold1_len3836081_cov232.fasta | wc -l
 ```
 63
+
 Общая длина
 ```
 grep -o "N" scaffold1_len3836081_cov232.fasta | wc -l
@@ -65,16 +66,17 @@ grep -o "N" scaffold1_len3836081_cov232.fasta | wc -l
 7270
 # Уменьшаем число гэпов и анализируем
 ```
-echo scaffold1_len3836081_cov232 > tmp2.txt
-seqtk subseq Poil_gapClosed.fa tmp1.txt > scaffold2_len3836081_cov232.fasta
+echo scaffold1_cov232 > tmp2.txt
+seqtk subseq Poil_gapClosed.fa tmp2.txt > scaffold2_len3836081_cov232.fasta
 ```
 Количество гэпов
 ```
 grep -o "N\+" scaffold2_len3836081_cov232.fasta | wc -l
 ```
-9
+5
+
 Общая длина
 ```
 grep -o "N" scaffold2_len3836081_cov232.fasta | wc -l
 ```
-1847
+1645
